@@ -1,0 +1,489 @@
+{
+	"info": {
+		"_postman_id": "8b715586-a615-4e73-afa8-27ee4c4b6f5c",
+		"name": "ASP.NET CORE 6 WEB API FELIPE LLINARES",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24200214"
+	},
+	"item": [
+		{
+			"name": "Get Viviendas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7079/api/viviendas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7079",
+					"path": [
+						"api",
+						"viviendas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Viviendas Paginadas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7079/api/viviendas/paginadas?pageNumber=1&pageSize=10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7079",
+					"path": [
+						"api",
+						"viviendas",
+						"paginadas"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Viviendas Paginadas (max = 1)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7079/api/viviendas/paginadas?pageNumber=2&pageSize=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7079",
+					"path": [
+						"api",
+						"viviendas",
+						"paginadas"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "2"
+						},
+						{
+							"key": "pageSize",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Vivienda (sin reservas)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7079/api/viviendas/2?includeReservas=false",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7079",
+					"path": [
+						"api",
+						"viviendas",
+						"2"
+					],
+					"query": [
+						{
+							"key": "includeReservas",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Vivienda (con reservas)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7079/api/viviendas/2?includeReservas=true",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7079",
+					"path": [
+						"api",
+						"viviendas",
+						"2"
+					],
+					"query": [
+						{
+							"key": "includeReservas",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Vivienda (inexistente)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7079/api/viviendas/10?includeReservas=true",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7079",
+					"path": [
+						"api",
+						"viviendas",
+						"10"
+					],
+					"query": [
+						{
+							"key": "includeReservas",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Vivienda por nombre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7079/api/viviendas/nombre?name=Casa%20de%20Campo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7079",
+					"path": [
+						"api",
+						"viviendas",
+						"nombre"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Casa%20de%20Campo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Vivienda por nombre (inexistente)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7079/api/viviendas/nombre?name=Casa%%Fea",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7079",
+					"path": [
+						"api",
+						"viviendas",
+						"nombre"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Casa%%Fea"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Reservas por ViviendaId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7079/api/viviendas/1/reservas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7079",
+					"path": [
+						"api",
+						"viviendas",
+						"1",
+						"reservas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Reserva por viviendaId y reservaId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7079/api/viviendas/1/reservas/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7079",
+					"path": [
+						"api",
+						"viviendas",
+						"1",
+						"reservas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Reserva por viviendaId y reservaId (inexistente)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7079/api/viviendas/1/reservas/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7079",
+					"path": [
+						"api",
+						"viviendas",
+						"1",
+						"reservas",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Reserva",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nameUsuario\": \"Juan Pedro\",\r\n  \"fechaInicio\": \"10-08-2022\",\r\n  \"fechaFin\": \"19-08-2022\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7079/api/viviendas/1/reservas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7079",
+					"path": [
+						"api",
+						"viviendas",
+						"1",
+						"reservas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Reserva",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nameUsuario\": \"Juan Carlos\",\r\n  \"fechaInicio\": \"08-04-2022\",\r\n  \"fechaFin\": \"21-05-2022\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7079/api/viviendas/1/reservas/4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7079",
+					"path": [
+						"api",
+						"viviendas",
+						"1",
+						"reservas",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar Reserva",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7079/api/viviendas/1/reservas/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7079",
+					"path": [
+						"api",
+						"viviendas",
+						"1",
+						"reservas",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Parcialmente Reserva",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n      \"op\": \"replace\",\r\n      \"path\": \"/NameUsuario\",\r\n      \"value\": \"Juan Ramón\"\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "https://localhost:7079/api/viviendas/1/reservas/4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7079",
+					"path": [
+						"api",
+						"viviendas",
+						"1",
+						"reservas",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Parcialmente Reserva (multiple)",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n      \"op\": \"replace\",\r\n      \"path\": \"/FechaInicio\",\r\n      \"value\": \"20-01-2021\"\r\n    },\r\n    {\r\n      \"op\": \"replace\",\r\n      \"path\": \"/FechaFin\",\r\n      \"value\": \"22-02-2021\"\r\n    }\r\n\r\n]"
+				},
+				"url": {
+					"raw": "https://localhost:7079/api/viviendas/1/reservas/4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7079",
+					"path": [
+						"api",
+						"viviendas",
+						"1",
+						"reservas",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Parcialmente Reserva (invalid property)",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n      \"op\": \"replace\",\r\n      \"path\": \"/invalidproperty\",\r\n      \"value\": \"Updated\"\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "https://localhost:7079/api/viviendas/1/reservas/4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7079",
+					"path": [
+						"api",
+						"viviendas",
+						"1",
+						"reservas",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Parcialmente Reserva (remove NameUsuario)",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n      \"op\": \"remove\",\r\n      \"path\": \"/NameUsuario\"\r\n    }\r\n]\r\n"
+				},
+				"url": {
+					"raw": "https://localhost:7079/api/viviendas/1/reservas/21",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7079",
+					"path": [
+						"api",
+						"viviendas",
+						"1",
+						"reservas",
+						"21"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
